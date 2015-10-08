@@ -1,7 +1,6 @@
 package br.com.claudio.training.trainingaplication.controller.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,8 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.claudio.training.trainingaplication.R;
+import br.com.claudio.training.trainingaplication.interfaces.DebugActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends DebugActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
