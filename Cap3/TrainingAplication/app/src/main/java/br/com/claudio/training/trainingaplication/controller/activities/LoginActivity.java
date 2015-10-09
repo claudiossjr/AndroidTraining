@@ -1,5 +1,7 @@
 package br.com.claudio.training.trainingaplication.controller.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -50,6 +52,11 @@ public class LoginActivity extends DebugActivity {
                 String password = tvPass.getText().toString();
                 if("SEARCH".equals(username) && "".equals(password)) {
                     alert("Logado");
+                    Intent intent = new Intent(getContext(),MenuActivity.class);
+                    Bundle params = new Bundle();
+                    params.putString("nome","Rosas");
+                    intent.putExtras(params);
+                    startActivity(intent);
                 } else {
                     alert("User or Password invalid.");
                 }
@@ -81,5 +88,9 @@ public class LoginActivity extends DebugActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private Context getContext() {
+        return this;
     }
 }

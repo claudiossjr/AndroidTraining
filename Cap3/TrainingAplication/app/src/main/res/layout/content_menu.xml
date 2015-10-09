@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btCliente"
+        android:layout_height="170dp"
+        android:layout_width="170dp"
+        android:text="@string/Cliente"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"
+        />
+    <Button
+        android:id="@+id/btPedido"
+        android:layout_height="170dp"
+        android:layout_width="170dp"
+        android:text="@string/Pedido"
+        android:layout_marginLeft="10dp"
+        android:background="#ffffff"
+        />
+</LinearLayout>
