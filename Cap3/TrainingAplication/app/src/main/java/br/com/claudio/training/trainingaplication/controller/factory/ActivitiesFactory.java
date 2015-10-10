@@ -2,7 +2,10 @@ package br.com.claudio.training.trainingaplication.controller.factory;
 
 import android.support.v7.app.AppCompatActivity;
 
-import br.com.claudio.training.trainingaplication.interfaces.ActivityFactoryInterface;
+import br.com.claudio.training.trainingaplication.controller.activities.MenuActivity;
+import br.com.claudio.training.trainingaplication.controller.activities.SearchClienteActivity;
+import br.com.claudio.training.trainingaplication.controller.activities.SearchPedidoActivity;
+import br.com.claudio.training.trainingaplication.utilities.interfaces.ActivityFactoryInterface;
 
 /**
  * Created by claudio on 07/10/15.
@@ -14,17 +17,17 @@ public class ActivitiesFactory implements ActivityFactoryInterface{
 
     @Override
     public AppCompatActivity getMenuActivity() {
-        return null;
+        return new MenuActivity();
     }
 
     @Override
     public AppCompatActivity getSelectPedidoActivity() {
-        return null;
+        return new SearchPedidoActivity();
     }
 
     @Override
     public AppCompatActivity getSelectClientActivity() {
-        return null;
+        return new SearchClienteActivity();
     }
 
     @Override

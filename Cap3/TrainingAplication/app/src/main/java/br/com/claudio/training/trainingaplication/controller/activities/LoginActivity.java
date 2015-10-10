@@ -3,7 +3,7 @@ package br.com.claudio.training.trainingaplication.controller.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,18 +12,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.claudio.training.trainingaplication.R;
-import br.com.claudio.training.trainingaplication.interfaces.DebugActivity;
+import br.com.claudio.training.trainingaplication.utilities.components.DebugActivity;
 
 public class LoginActivity extends DebugActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content_login);
 
         //ativando o toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Login");
 
         Button btLogin = (Button) findViewById(R.id.btLogin);
         btLogin.setOnClickListener(getLoginListener());
@@ -57,6 +59,7 @@ public class LoginActivity extends DebugActivity {
                     params.putString("nome","Rosas");
                     intent.putExtras(params);
                     startActivity(intent);
+                    finish();
                 } else {
                     alert("User or Password invalid.");
                 }
