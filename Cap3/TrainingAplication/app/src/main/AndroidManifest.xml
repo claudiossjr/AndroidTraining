@@ -18,9 +18,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controller.activities.MenuActivity" />
-        <activity android:name=".controller.activities.SearchClienteActivity" />
-        <activity android:name=".controller.activities.SearchPedidoActivity" />
+        <activity
+            android:name=".controller.activities.MenuActivity"
+            android:label="@string/activity_menu_name"
+            />
+        <activity
+            android:name=".controller.activities.SearchClienteActivity"
+            android:parentActivityName=".controller.activities.MenuActivity"
+            android:label="@string/activity_search_client"
+            />
+        <activity
+            android:name=".controller.activities.ListPedidoActivity"
+            android:parentActivityName=".controller.activities.SearchClienteActivity"
+            android:label="@string/activity_list_pedido"
+            />
+        <activity
+            android:name=".controller.activities.SearchPedidoActivity"
+            android:parentActivityName=".controller.activities.MenuActivity"
+            android:label="@string/activity_search_pedido"
+            />
+        <activity
+            android:name=".controller.activities.ListItemPedidoActivity"
+            android:parentActivityName=".controller.activities.SearchPedidoActivity"
+            android:label="@string/activity_list_item_pedido"
+            />
     </application>
 
 </manifest>
